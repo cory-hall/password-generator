@@ -5,10 +5,22 @@ var generateBtn = document.querySelector("#generate");
 
 // Write password to the #password input
 function writePassword() {
-  var password = generatePassword();
-  var passwordText = document.querySelector("#password");
 
-  passwordText.value = password;
+  // if charArray is empty, then create password
+  if (charArray === null) {
+    var password = generatePassword();
+    var passwordText = document.querySelector("#password");
+    passwordText.value = password;
+  } else {
+    // reset array to improve user experience, then create password
+    charArray = [];
+    var password = generatePassword();
+    var passwordText = document.querySelector("#password");
+    passwordText.value = password;
+  }
+
+
+
 
 }
 
@@ -134,6 +146,8 @@ function specialCharacters () {
   var specialCharsConfirm = window.confirm("Would you like to include special characters?");
 
   if (specialCharsConfirm) {
+    // iterate through specialChars array
+    // amd add to char Array for password generation
     for(var i = 0; i < specialChars.length; i++) {
       charArray.push(specialChars[i]);
     }
