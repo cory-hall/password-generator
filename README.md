@@ -16,7 +16,7 @@ The website will prompt five different questions to the user:
 If the user selects none of the prompted questions, the program will default to all variables being active.
 
 ## Installation
-<img src=Assets\images\Screenshot-password-generator.png width=50% height=50%/> <br/>
+<img src=Assets\images\Screenshot-password-generator.png width=75% height=75%/> <br/>
 Simply launch the webpage hosted at:
 * https://cory-hall.github.io/password-generator/
 
